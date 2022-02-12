@@ -1,3 +1,148 @@
-body{
-    
+#nav-bar{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#nav-bar > #first-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-bar > #first-container > #page-logo{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 22px;
+    margin-left: 30px;
+}
+
+.mobile-cont{
+    display: none;
+}
+
+.desktop-cont{
+    display: flex;
+}
+
+#nav-bar > #search-box{
+    position: relative;
+    margin: 10px 0 10px 0;
+}
+
+#nav-bar > #search-box > input[type=text] {
+    /* float: right; */
+    font-family: inter;
+    font-size: 12px;
+    height: 12px;
+    padding: 6px;
+    border: none;
+    outline: 0.1px solid #131735;
+    width: 40vw;
+}
+
+#nav-bar > #search-box > input[type=text]:focus::placeholder {
+    color: transparent;
+    position: relative;
+}
+
+#nav-bar > #search-box > .material-icons{
+    position: absolute;
+    right: 5px;
+    top: 15%;
+    cursor: pointer;
+    color: #131735;
+    font-size: 14px;
+}
+
+
+.nav-buttons-container{
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.nav-buttons{
+    align-items: center;
+    border-radius: 50px;
+    display: flex;
+    font-family: inter;
+    font-size: 12px;
+    font-weight: 500;
+    height: 20px;
+    justify-content: center;
+    width: 79px;
+}
+
+.nav-buttons-container > #log-in{
+    border: 1px solid #565A75;
+    color: #0F0F1B;
+    margin-right: 10px;
+}
+
+.nav-buttons-container > #sign-up{
+    background-color: #565A75;
+    color: #FAFBF6;
+}
+
+/* @media screen and (max-width: 790px) {
+    #nav-bar > #page-logo{
+        font-size: 17px;
+        width: 79px;
+        text-align: center;
+    }
+
+} */
+
+@media screen and (max-width: 780px) {
+    #nav-bar{
+        flex-direction: column;
+    }
+
+    #nav-bar > #first-container{
+        width: 80vw;
+    }
+
+    #nav-bar > #first-container > #page-logo{
+        font-size: 13px;
+        width: 179px;
+        text-align: center;
+        margin: 5px 0 5px 0;
+    }
+
+    #nav-bar > #search-box > input[type=text] {
+        width: 80vw;
+        height: 8px;
+        font-size: 12px;
+    }
+
+    .nav-buttons-container{
+        display: none;
+        margin-right: 0;
+
+    }
+
+    .mobile-cont{
+        display: block;
+    }
+
+    .nav-buttons{
+        font-size: 8px;
+        height: 14px;
+        width: 59px;
+        margin: 0;
+    }   
+
+    #nav-bar > #first-container > #page-logo{
+        margin-left: 0px;
+        width: auto;
+    }
+
+    .nav-buttons-container > #log-in{
+        margin-right: 5px;
+    }
+
+    .mobile-cont{
+        display: flex;
+    }
 }
