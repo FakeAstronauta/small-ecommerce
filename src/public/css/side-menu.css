@@ -1,7 +1,11 @@
 #side-menu-container{
+    z-index: 1;
     display: flex;
-    position: sticky;
-    transform: translateX(-30vw);
+    font-family: inter;
+    position: fixed;
+    width: fit-content;
+    overflow-y: auto;
+    /* transform: translateX(-30vw); */
 }
 
 @keyframes hide-side-menu {
@@ -18,14 +22,55 @@
     }
 }
 
+/* menu content */
+
 #side-menu-container > #side-menu{
+    background-color: #f6fbf7; 
+    border-right: solid 1px #C4C4C4;
     height: 92vh;
     width: 30vw;
-    background-color: yellowgreen;
 }
+
+#side-menu-container > #side-menu > .accordion-element{
+    /* background-color: yellowgreen; */
+    height: 24px;
+    border-top: 0.1px solid #C4C4C4;
+    color: #0F0F1B;
+    overflow-y: hidden;
+    transition: height 0.5s linear;
+
+}
+
+#side-menu-container > #side-menu > .accordion-element > .header{
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+}
+
+#side-menu-container > #side-menu > .accordion-element > .body{
+    font-size: 12px;
+    align-items: center;
+    padding: 0 10px 5px 10px;
+}
+
+#side-menu-container > #side-menu > .accordion-element > .body > input{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    color: yellowgreen;
+    background-color: blue;
+    width: 11px;
+    height: 11px;
+}
+
+/* Label */
 
 #side-menu-container > #label{
     align-items: center;
+    color: #0F0F1B;
     cursor: pointer;
     /* justify-content: space-between; */
     display: flex;
@@ -39,5 +84,7 @@
 }
 
 #side-menu-container > #label > .material-icons{
+    color: #0F0F1B;
     font-size: 16px;
+
 }

@@ -1,8 +1,84 @@
 <div id="side-menu-container">
-    <div id="side-menu">
+    <div id="side-menu"> 
+        <!-- Age: childs adults
+            context: vacation celebration casual formal
+            Relation: family friends couple
+            Content: people landscape buildings objects
+            number of people:  -->
         <div class="accordion-element">
-            <div class="header"></div>
+            <div class="header" onclick="displayAccordion(0)">
+                Orientation
+                <span class="material-icons">
+                    arrow_drop_down
+                </span>
+            </div>
+            <div class="body">
+                <input type="radio" id="html" name="orientation" onclick="filterSelection('gato')" checked>
+                <label for="html">All orientations</label><br>
+                <input type="radio" id="html" name="orientation">
+                <label for="html">Landscape</label><br>
+                <input type="radio" id="css" name="orientation" >
+                <label for="css">Portrait</label><br>
+            </div>
         </div>
+
+        <div class="accordion-element">
+            <div class="header" onclick="displayAccordion(1)">
+                Age
+                <span class="material-icons">
+                    arrow_drop_down
+                </span>
+            </div>
+            <div class="body">
+                <input type="radio" id="html" name="age" onclick="filterSelection('pato')" checked>
+                <label for="html">All ages</label><br>
+                <input type="radio" id="html" name="age">
+                <label for="html">Childs</label><br>
+                <input type="radio" id="css" name="age" >
+                <label for="css">Adults</label><br>
+            </div>
+        </div>
+
+        <div class="accordion-element">
+            <div class="header" onclick="displayAccordion(2)">
+                Context
+                <span class="material-icons">
+                    arrow_drop_down
+                </span>
+            </div>
+            <div class="body">
+                <input type="radio" id="html" name="context" checked>
+                <label for="html">All contexts</label><br>
+                <input type="radio" id="html" name="context">
+                <label for="html">Vacation</label><br>
+                <input type="radio" id="css" name="context" >
+                <label for="css">Casual</label><br>
+                <input type="radio" id="css" name="context" >
+                <label for="css">Formal</label><br>
+            </div>
+        </div>
+
+        <div class="accordion-element">
+            <div class="header" onclick="displayAccordion(3)">
+                Content
+                <span class="material-icons">
+                    arrow_drop_down
+                </span>
+            </div>
+            <div class="body">
+                <input type="radio" id="html" name="Content" checked>
+                <label for="html">All contents</label><br>
+                <input type="radio" id="html" name="Content">
+                <label for="html">People</label><br>
+                <input type="radio" id="css" name="Content" >
+                <label for="css">Landscape</label><br>
+                <input type="radio" id="css" name="Content" >
+                <label for="css">Buildings</label><br>
+                <input type="radio" id="css" name="Content" >
+                <label for="css">Objects</label><br>
+            </div>
+        </div>
+        
     </div>
     <div id="label" onclick="displaceMenu()">
         <span class="material-icons">

@@ -1,8 +1,13 @@
 #nav-bar{
     align-items: center;
+    background-color: #f6fbf7;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    /* position: fixed; */
+    top: 0;
+    position: sticky;
+    z-index: 1;
 }
 
 #nav-bar > #first-container{

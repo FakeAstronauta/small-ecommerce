@@ -1,0 +1,81 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.show{
+    display: block !important;
+}
+
+.column{
+    display: none;
+}
+
+.row > .column > .img-container{
+    width: 24.25vw;
+}
+
+
+.row > .column > .img-container > .header{
+    position: relative;
+    display: flex;
+}
+
+.row > .column > .img-container > .header > img{
+    width: 100%;
+    height: 100%;
+}
+
+.row > .column > .img-container > .header > .show-on-overlay{
+    background-color: rgba(0, 0, 0, 0.527);
+    height: 100%;
+    width: 100%;
+    /* absolute allows the total width of the div */
+    position: absolute; 
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+.row > .column > .img-container > .header > .show-on-overlay:hover{
+    opacity: 1;
+}
+
+.row > .column > .img-container > .header > .show-on-overlay > .material-icons{
+    color: #f6fbf7;
+    cursor: pointer;
+    font-size: 15px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+.row > .column > .img-container > .header > .show-on-overlay > .letter{
+    color: #f6fbf7;
+    cursor: pointer;
+    font-family: inter;
+    font-weight: 500;
+    font-size: 15px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    top: 50%;
+}
+
+.row > .column > .img-container > .footer {
+    box-sizing: border-box;
+    border: #C4C4C4 solid 1px;
+    background-color: #f6fbf7;
+    display: flex;
+    font-family: inter;
+    font-size: 10px;
+    justify-content: space-between;
+    padding: 2px 5px 2px 5px;
+}
+
+.row > .column > .img-container > .footer > .full-size{
+    font-weight: 600;
+    cursor: pointer;
+}
