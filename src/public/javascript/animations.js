@@ -20,6 +20,5 @@ function displayAccordion(num){
     }
 
     lastNum = num;
-    console.log(num);
 }
 displayAccordion(0);

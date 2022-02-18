@@ -13,9 +13,9 @@
                 </span>
             </div>
             <div class="body">
-                <input type="radio" id="html" name="orientation" onclick="filterSelection('gato')" checked>
+                <input type="radio" id="html" name="orientation" onclick="filterSelection('gato', 'orientation')" checked>
                 <label for="html">All orientations</label><br>
-                <input type="radio" id="html" name="orientation">
+                <input type="radio" id="html" name="orientation" onclick="filterSelection('perro', 'orientation')">
                 <label for="html">Landscape</label><br>
                 <input type="radio" id="css" name="orientation" >
                 <label for="css">Portrait</label><br>
@@ -30,9 +30,9 @@
                 </span>
             </div>
             <div class="body">
-                <input type="radio" id="html" name="age" onclick="filterSelection('pato')" checked>
+                <input type="radio" id="html" name="age" onclick="filterSelection('pato', 'age')" checked>
                 <label for="html">All ages</label><br>
-                <input type="radio" id="html" name="age">
+                <input type="radio" id="html" name="age" onclick="filterSelection('ganso', 'age')">
                 <label for="html">Childs</label><br>
                 <input type="radio" id="css" name="age" >
                 <label for="css">Adults</label><br>

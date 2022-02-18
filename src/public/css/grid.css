@@ -4,13 +4,15 @@
     margin-top: 25px;
 }
 
-.show{
-    display: block !important;
-}
-
+/* si escribo .column abajo de .show  el display no se sobreescribe, debe ser una jerarquia*/
 .column{
     display: none;
 }
+
+.show{
+    display: block;
+}
+
 
 .row > .column > .img-container{
     width: 24.25vw;
