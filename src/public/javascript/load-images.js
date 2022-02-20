@@ -1,23 +1,70 @@
+import {filterSelection} from './filter.js'
+
+let f = [['landscape', 'portrait'],
+         [' childs', ' adults', ' childs&adults'],
+         [' vacation', ' casual', ' formal'],
+         [' people', ' buildings']];
+         
+let idImages = {'4807505': f[0][1] + f[1][1] + f[2][2] + f[3][0],
+                '4807502': f[0][1] + f[1][1] + f[2][2] + f[3][0],
+                '4224930': f[0][0] + f[1][2] + f[2][0] + f[3][0],
+                '9016163': f[0][1] + f[1][0] + f[2][1] + f[3][0],
+                '5439508': f[0][0] + f[3][1],
+                '4224927': f[0][0] + f[1][1] + f[2][2] + f[3][0],
+                '9398487': f[0][1] + f[1][0] + f[2][0] + f[3][0],
+                '4823826': f[0][1] + f[3][1],
+                '9398465': f[0][1] + f[1][2] + f[2][1] + f[3][0],
+                '9015673': f[0][0] + f[1][2] + f[2][1] + f[3][0],
+                '9489475': f[0][0] + f[1][0] + f[2][2] + f[3][0],
+                '9469395': f[0][1] + f[1][0] + f[2][2] + f[3][0],
+                '4696882': f[0][1] + f[3][1],
+                '5221698': f[0][0] + f[1][2] + f[2][2] + f[3][0],
+                '4956210': f[0][0] + f[1][1] + f[2][1] + f[3][0],
+                '5844058': f[0][0] + f[1][1] + f[2][2] + f[3][0],
+                '11219976': f[0][1] + f[3][1],
+                '9657870': f[0][1] + f[1][2] + f[2][1] + f[3][0],
+                '9578815': f[0][1] + f[1][1] + f[2][0] + f[3][0],
+                '8679952': f[0][1] + f[1][1] + f[2][1] + f[3][0]}
+
+let column = document.querySelectorAll('.column')
+
+let counter = 1;    
+let columnIndex = 0;
+
 async function insertImage(){
-    let raw = await fetch(`https://api.pexels.com/v1/photos/10824949`,{ headers: {
-        Authorization: '563492ad6f917000010000017b6f3158f1794ee085b3def899f919dd'
-    }});
-    let data = await raw.json();
-    console.log(data)
-    // for(let a of data.photos){
-    //     stringContent += `
-    //     <div class='grid-item'>
-    //         <img src=${a.src.tiny}/>
-    //         <div class='text-container'>
-    //             <h4>LOREM IPSUM DOLOR</h4>
-    //             <bold>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</bold>
-    //             <p>lorem 00</p>
-    //         </div>
-    //     </div>
-    //     `;
-    // }
-    // container[0].innerHTML = container[0].innerHTML + stringContent;
-    // page_num++;
-    // stringContent = ' '
+    for(let i in idImages){
+
+        let raw = await fetch(`https://api.pexels.com/v1/photos/${i}`,{ headers: {
+            Authorization: '563492ad6f917000010000017b6f3158f1794ee085b3def899f919dd'
+        }});
+        let data = await raw.json();
+        // console.log(data.src.large)
+        
+        let stringContent =
+        `<div class="img-container ${idImages[i]} ">
+            <div class="header">
+                <div class="show-on-overlay">
+                    <span class="material-icons">
+                        star
+                    </span>
+                    <span class="letter">ADD TO CART</span>
+                </div>
+                <img src="${data.src.large}" alt="">
+            </div>
+            <div class="footer">
+                $20.69
+                <span class="full-size">Show full size</span>
+            </div>
+        </div>`
+        // console.log(columnIndex)
+        
+        column[columnIndex].innerHTML += stringContent;
+        
+        if(counter % 5 == 0){columnIndex++}
+        if(counter == 20){filterSelection('all')}
+        counter++;
+        
+    }
 }
-// insertImage()
+
+insertImage()

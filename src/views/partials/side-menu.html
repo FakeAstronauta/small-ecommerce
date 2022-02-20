@@ -15,9 +15,9 @@
             <div class="body">
                 <input type="radio" id="html" name="orientation" onclick="filterSelection('gato', 'orientation')" checked>
                 <label for="html">All orientations</label><br>
-                <input type="radio" id="html" name="orientation" onclick="filterSelection('perro', 'orientation')">
+                <input type="radio" id="html" name="orientation" onclick="filterSelection('landscape', 'orientation')">
                 <label for="html">Landscape</label><br>
-                <input type="radio" id="css" name="orientation" >
+                <input type="radio" id="css" name="orientation" onclick="filterSelection('portrait', 'orientation')">
                 <label for="css">Portrait</label><br>
             </div>
         </div>
@@ -32,10 +32,12 @@
             <div class="body">
                 <input type="radio" id="html" name="age" onclick="filterSelection('pato', 'age')" checked>
                 <label for="html">All ages</label><br>
-                <input type="radio" id="html" name="age" onclick="filterSelection('ganso', 'age')">
+                <input type="radio" name="age" onclick="filterSelection('childs', 'age')">
                 <label for="html">Childs</label><br>
-                <input type="radio" id="css" name="age" >
+                <input type="radio" name="age" onclick="filterSelection('adults', 'age')">
                 <label for="css">Adults</label><br>
+                <input type="radio" name="age" onclick="filterSelection('childs&adults', 'age')">
+                <label for="css">Childs and adults</label><br>
             </div>
         </div>
 
@@ -49,11 +51,11 @@
             <div class="body">
                 <input type="radio" id="html" name="context" checked>
                 <label for="html">All contexts</label><br>
-                <input type="radio" id="html" name="context">
+                <input type="radio" id="html" name="context" onclick="filterSelection('vacation', 'context')">
                 <label for="html">Vacation</label><br>
-                <input type="radio" id="css" name="context" >
+                <input type="radio" id="css" name="context" onclick="filterSelection('casual', 'context')">
                 <label for="css">Casual</label><br>
-                <input type="radio" id="css" name="context" >
+                <input type="radio" id="css" name="context" onclick="filterSelection('formal', 'context')">
                 <label for="css">Formal</label><br>
             </div>
         </div>
@@ -68,13 +70,9 @@
             <div class="body">
                 <input type="radio" id="html" name="Content" checked>
                 <label for="html">All contents</label><br>
-                <input type="radio" id="html" name="Content">
+                <input type="radio" id="html" name="Content" onclick="filterSelection('people', 'contents')">
                 <label for="html">People</label><br>
-                <input type="radio" id="css" name="Content" >
-                <label for="css">Landscape</label><br>
-                <input type="radio" id="css" name="Content" >
-                <label for="css">Buildings</label><br>
-                <input type="radio" id="css" name="Content" >
+                <input type="radio" id="css" name="Content" onclick="filterSelection('objects', 'contents')">
                 <label for="css">Objects</label><br>
             </div>
         </div>

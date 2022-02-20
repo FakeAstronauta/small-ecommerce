@@ -8,6 +8,13 @@ let keys = new Set();  // para evitar datos repetidos
 let boolValue = true;
 let matches = []
 
+// aware to testing
+function deleteAll(c='all', filterName){
+  deleteFilters(filterName)
+  filterSelection(c, filterName)
+
+}
+
 function deleteFilters(filterName) {
   if (filterName != "") {
     // console.log(keys)
@@ -15,7 +22,7 @@ function deleteFilters(filterName) {
   }
 }
 
-function filterSelection(c, filterName = "") {
+export function filterSelection(c, filterName = "") {
   
   // the previous element must be deleted before add the other
   if (c != keysNames[filterName]) { // si se pasa el mismo filtro que ya esta guardado que no lo borre
@@ -23,8 +30,8 @@ function filterSelection(c, filterName = "") {
   }
 
   var x, i;
-  x = document.getElementsByClassName("column");
-
+  x = document.getElementsByClassName("img-container");
+  console.log(x[0])
   // si no es 'all' el nombre es agregado a keys
   if (c == "all") {
     c = ""
@@ -37,8 +44,8 @@ function filterSelection(c, filterName = "") {
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show"); // clear the show class of all elements
     if (x[i].className.indexOf(c) > -1) { // FIRST: if the filter passed in 'c' is in the class name of any element
+
       // all alements in keys are compared with the class name of every element
-      
       keys.forEach(e => {
         if (x[i].className.indexOf(e) == -1) { // SECOND: The filter is compared with the saved in keys
           matches.push(false);
@@ -88,4 +95,5 @@ function w3RemoveClass(element, name) {
 
 }
 
-filterSelection("all")
+window
+// filterSelection("all")
