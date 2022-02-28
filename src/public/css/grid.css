@@ -7,8 +7,10 @@
 /* si escribo .column abajo de .show  el display no se sobreescribe, debe ser una jerarquia*/
 
 .row > .column > .img-container{
-    width: 24.25vw;
     display: none;
+    margin-bottom: 5px;
+    width: 24.25vw;
+
 }
 
 .row > .column > .show{
@@ -65,7 +67,7 @@
 
 .row > .column > .img-container > .footer {
     box-sizing: border-box;
-    border: #C4C4C4 solid 1px;
+    border: #d8d8d8 solid 1px;
     background-color: #f6fbf7;
     display: flex;
     font-family: inter;
@@ -77,4 +79,41 @@
 .row > .column > .img-container > .footer > .full-size{
     font-weight: 600;
     cursor: pointer;
+}
+
+/* skeleton */
+
+div[class*='skeleton']{
+    animation: skeleton-loading 1s linear infinite alternate;
+
+}
+
+.skeleton-image-portrait{
+    width: 24.25vw;
+    height: 35vw;
+}
+
+.skeleton-image-landscape{
+    width: 24.25vw;
+    height: 15vw;
+}
+
+.skeleton-price{
+    width: 5vw;
+    height: 1vw;
+}
+
+.skeleton-text{
+    width: 10vw;
+    height: 1vw;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
 }

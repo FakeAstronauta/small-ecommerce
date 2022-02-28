@@ -5,7 +5,7 @@
     position: fixed;
     width: fit-content;
     overflow-y: auto;
-    /* transform: translateX(-30vw); */
+    transform: translateX(-20vw);
 }
 
 @keyframes hide-side-menu {
@@ -28,7 +28,8 @@
     background-color: #f6fbf7; 
     border-right: solid 1px #C4C4C4;
     height: 92vh;
-    width: 30vw;
+    width: 20vw;
+    cursor: pointer;
 }
 
 #side-menu-container > #side-menu > .accordion-element{

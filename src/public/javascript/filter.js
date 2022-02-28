@@ -9,7 +9,7 @@ let boolValue = true;
 let matches = []
 
 // aware to testing
-function deleteAll(c='all', filterName){
+export function deleteAll(c='all', filterName){
   deleteFilters(filterName)
   filterSelection(c, filterName)
 
@@ -31,7 +31,7 @@ export function filterSelection(c, filterName = "") {
 
   var x, i;
   x = document.getElementsByClassName("img-container");
-  console.log(x[0])
+  // console.log(x[0])
   // si no es 'all' el nombre es agregado a keys
   if (c == "all") {
     c = ""
@@ -39,7 +39,7 @@ export function filterSelection(c, filterName = "") {
     keys.add(c)
     keysNames[filterName] = c;
   };
-  console.log(keys)
+  // console.log(keys)
   // se hace un recorrido por todos los elementos con cada refresh
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show"); // clear the show class of all elements
@@ -53,7 +53,7 @@ export function filterSelection(c, filterName = "") {
           matches.push(true);
         }
       });
-      console.log(matches)
+      // console.log(matches)
 
       if(matches.includes(false)){ // si false esta presente almenos una vez
         boolValue = false;
@@ -95,5 +95,5 @@ function w3RemoveClass(element, name) {
 
 }
 
-window
-// filterSelection("all")
+
+filterSelection("all")

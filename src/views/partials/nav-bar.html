@@ -1,21 +1,26 @@
 <div id="nav-bar">
-    <div id="first-container">
+    <div id="first-container" >
         <span id="page-logo">ROUND CORNER</span>
-        <div class="nav-buttons-container mobile-cont">
-            <div class="nav-buttons" id="log-in">Log in</div>
-            <div class="nav-buttons" id="sign-up">Sign up</div>
+        <div class="nav-buttons-container mobile-cont" >
+            <div class="nav-buttons" id="log-in" >Log in</div>
+            <div class="nav-buttons" id="sign-up" onclick="showForm()">Sign up</div>
         </div>
     </div>
     
     <div id="search-box">
-        <input type="text" placeholder="Search..">
-        <span class="material-icons">
-            search
-        </span>
+        <div id="nav-input">
+            <input type="text" placeholder="Example: friends, vacation, etc">
+            <span class="material-icons">
+                search
+            </span>
+        </div>
+        <div id="drop-down"></div>
     </div>
 
     <div class="nav-buttons-container desktop-cont">
-        <div class="nav-buttons" id="log-in">Log in</div>
-        <div class="nav-buttons" id="sign-up">Sign up</div>
+        <div class="nav-buttons" id="log-in" >Log in</div>
+        <div class="nav-buttons" id="sign-up" onclick="showForm()">Sign up</div>
     </div>
+
+
 </div>

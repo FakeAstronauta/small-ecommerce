@@ -4,7 +4,7 @@ let state = true;
 // hide and show menu based in the state
 function displaceMenu(){
     sideMenu.style.animation = `${state ? `show` : `hide`}-side-menu 0.2s linear`;
-    sideMenu.style.transform =  `translateX(${state ? `0` : `-30`}vw)`;
+    sideMenu.style.transform =  `translateX(${state ? `0` : `-20`}vw)`;
     state = !state;
 }
 
