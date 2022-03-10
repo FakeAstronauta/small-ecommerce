@@ -108,6 +108,55 @@ background-color: #C4C4C4 !important;
     margin-right: 30px;
 }
 
+.flex{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-buttons-container > div > .material-icons{
+    color: #565A75;
+    margin: 0 0 0 20px;
+    cursor: pointer;
+}
+
+.nav-buttons-container > #profile > .dropdown-content{
+    background-color: #f6fbf7;
+    border: solid #565A75 0.5px;
+    display: none;
+    font-family: inter;
+    position: absolute;
+    text-align: center;
+    /* padding: 5px 0 5px 0; */
+    right: 0;
+}
+
+.nav-buttons-container > div > .dropdown-content > a{
+    padding: 4px 10px 4px 10px;
+    text-decoration: none;
+    color: #565A75;
+    display: block;
+}
+
+.nav-buttons-container > div > .dropdown-content > a:hover{
+    background-color: #565A75;
+    color: white;
+}
+
+.nav-buttons-container > div > #badge{
+    align-items: center;
+    background-color: #C6B7BE;
+    color: white;
+    display: flex;
+    font-family: inter;
+    font-size: 10px;
+    justify-content: center;
+    height: 14px;
+    position: absolute;
+    transform: translate(20%, -20%);
+    width: 14px;
+    border-radius: 50%;
+}
+
 .nav-buttons{
     align-items: center;
     border-radius: 50px;

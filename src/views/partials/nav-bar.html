@@ -16,10 +16,29 @@
         </div>
         <div id="drop-down"></div>
     </div>
-
+<!-- 
     <div class="nav-buttons-container desktop-cont">
         <div class="nav-buttons" id="log-in" >Log in</div>
         <div class="nav-buttons" id="sign-up" onclick="showForm()">Sign up</div>
+    </div> -->
+
+    <div class="nav-buttons-container desktop-cont">
+        <div class="flex">
+            <span id="badge">1</span>
+            <span class="material-icons">
+                shopping_cart
+            </span>
+        </div>
+        <div id="profile" onclick="displayDropdown()">
+            <span class="material-icons">
+                account_circle
+            </span>
+            <div class="dropdown-content">
+                <a href="#">Profile</a>
+                <a href="#">Favorites</a>
+                <a href="#">Log out</a>
+              </div>
+        </div>
     </div>
 
 
