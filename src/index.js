@@ -3,6 +3,7 @@ const path = require('path')
 const passport = require('passport');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session');
+const flash = require('connect-flash');
 
 let {database} = require('./keys')
 
@@ -31,9 +32,17 @@ app.use(session({
 app.use(express.urlencoded({extended: false})); // body data is filtered, maybe just security
 app.use(express.json());
 
+app.use(flash())
 app.use(passport.initialize());
 app.use(passport.session());
 
+// local variables
+app.use((req, res, next) => {
+    app.locals.success = req.flash('success');
+    app.locals.message = req.flash('message');
+    app.locals.user = req.user;
+    next();
+});
 
 // Routes
 app.use(require('./routes'));

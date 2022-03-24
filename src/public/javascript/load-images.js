@@ -80,7 +80,7 @@ async function insertImage(){
             <span class="material-icons">
                 star
             </span>
-            <span class="letter">ADD TO CART</span>
+            <span class="letter" onclick="addProducts('${data.src.small}')">ADD TO CART</span>
         </div>
         <img src="${data.src.large}" alt=""></img>`;
         cloned.querySelector('.footer').innerHTML = 

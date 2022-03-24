@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/succes.css">
+    <link rel="stylesheet" href="/css/nav-bar.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body onload="addProductCount()">
+    <%- include('./partials/nav-bar.html'); %>
+    <%- include('./partials/succes.html'); %>
+    <div id="global-container">
+        <div class="user-info-container">
+            <h3>User info</h3>
+            <div class="profile">
+                <span class="material-icons">
+                    account_circle
+                </span>
+                <span class="username"><%= user.username%></span>
+            </div>
+            <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque qui alias quo?</div>
+            <div class="divisor"></div>
+            <a class="button-cont" onclick="showSucces()">
+                <div id="price">$0.00</div>
+                <div id="button" >Buy</div>
+            </a>
+        </div>
+        <% if(itemsLinks.length > 0){ %>
+            <div class="products">
+                <% for (var i in itemsLinks) { %>
+                    <div class="product-container" id="<%= i%>">
+                        <div class="img-container">
+                            <img src="<%= itemsLinks[i].link%>">
+                            <h4 class="remove" onclick="removeProduct('<%= i%>', '<%=itemsLinks[i].id%>')">remove</h4>
+                        </div>
+                        <div class="quantity">
+                            <div class="counter">
+                                <div class="buttons" onclick="changePrice('-', '<%= i%>')">-</div>
+                                <div class="number">1</div>
+                                <div class="buttons" onclick="changePrice('+', '<%= i%>')">+</div>
+                            </div>
+                            <h4 class="final-price">$90.00</h4>
+                        </div>
+                    </div>
+                    
+                <% } %>
+            </div>
+            <% }else{ %>
+                <div class="col-md-4 mx-auto">
+                    <card class="card card-body text-center">
+                        <p>There are no products saved yet</p>
+                        
+                    </card>
+                </div>
+            <% } %>
+        
+    </div>
+
+    <script type="text/javascript" src="/javascript/buttons-functions.js"></script>
+</body>
+</html>
